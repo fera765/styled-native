@@ -1,0 +1,35 @@
+{
+  "include": ["src", "types"],
+  "compilerOptions": {
+    "module": "esnext",
+    "lib": ["dom", "esnext"],
+    "importHelpers": true,
+    "declaration": true,
+    "sourceMap": true,
+    "rootDir": "./src",
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "moduleResolution": "node",
+    "baseUrl": "./",
+    "paths": {
+      "*": ["src/*", "node_modules/*"]
+    },
+    "plugins": [
+      {
+        "name": "typescript-styled-plugin",
+        "tags": ["styled"],
+        "lint": {
+          "validProperties": ["elevation"],
+          "duplicateProperties": "warn",
+          "zeroUnits": "warning",
+          "float": "warning"
+        }
+      }
+    ],
+    "jsx": "react",
+    "esModuleInterop": true
+  }
+}
